@@ -52,6 +52,7 @@ namespace :db do
   desc "populate the database with sample data"
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
+    Seed::seed
   end
 
 
