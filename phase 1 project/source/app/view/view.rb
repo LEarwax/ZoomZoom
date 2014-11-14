@@ -8,6 +8,6 @@ module View
   end
 
   def self.cars(cars)
-    cars.each do
+    cars.each{|car| "#{car.year} #{car.make} #{car.model}"}
   end
 end
