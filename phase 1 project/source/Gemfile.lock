@@ -17,6 +17,9 @@ GEM
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     diff-lcs (1.2.5)
+    faker (1.4.3)
+      i18n (~> 0.5)
+    hirb (0.7.2)
     i18n (0.6.11)
     json (1.8.1)
     minitest (5.4.1)
@@ -43,6 +46,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 4.1)
+  faker
+  hirb
   rake
   rspec
   sqlite3

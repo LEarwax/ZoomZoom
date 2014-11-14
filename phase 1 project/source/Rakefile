@@ -1,4 +1,5 @@
 require_relative "config/environment"
+require_relative "db/seeds"
 require 'rspec/core/rake_task'
 
 
@@ -51,6 +52,7 @@ namespace :db do
   desc "populate the database with sample data"
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
+    Seed::seed
   end
 
 

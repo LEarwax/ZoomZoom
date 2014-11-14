@@ -1,13 +1,18 @@
 class CreateCars < ActiveRecord::Migration
   def change
+
     create_table :cars do |t|
-      t.integer   :horsepower
-      t.integer   :torque
-      t.integer   :mpg
-      t.integer   :Zero2Sixty
-      t.integer   :turn_radius
-      t.integer   :air_drag
-      t.integer   :weight
+      t.integer    :year
+      t.integer    :make
+      t.integer    :model
+      t.integer    :trim
+      t.integer    :mpg_combined
+      t.integer    :horsepower
+      t.integer    :torque
+      t.integer    :airdrag
+      t.integer    :weight
+      t.integer    :zero_2_sixty
+      t.integer    :edmundsID
 
       t.timestamps
     end
