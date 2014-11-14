@@ -1,19 +1,29 @@
-module Controller
-  View.render("Welcome to Zoom Zoom!!!")
+require_relative "../models/edmunds"
+require_relative "../view/view"
+require_relative "../../config/environment"
 
+module Controller
   def self.run
-    command = ARGV[0]
+    View.render("Welcome to Zoom Zoom!!!")
+    puts "What do you want to do:"
+    puts "(add)"
+    puts "(list)"
+    command = gets.chomp
     case command
     when 'add'
-      data = Edmunds.run(ARGV[1])
+      puts "What year is the car?"
+      year = gets.chomp
+      data = Edmunds.run(year.to_i)
       Car.create(data)
     when 'list'
-      View.cars(Car.all)
+      Car.all.each{|car| puts "#{car.year} #{car.make} #{car.model}"}
     else
       "Sorry that's not a command!"
     end
   end
 
+
+Controller.run
   # View.render("What do you want to do?")
   # View.list(["login", "create"])
 
