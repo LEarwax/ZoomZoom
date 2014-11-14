@@ -4,6 +4,9 @@ require "rspec"
 require "rake"
 require "sqlite3"
 require "pathname"
+require "hirb"
+require "faker"
+Hirb.enable
 
 
 # Identify the root directory for the application
