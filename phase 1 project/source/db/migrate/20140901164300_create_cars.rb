@@ -2,7 +2,6 @@ class CreateCars < ActiveRecord::Migration
   def change
 
     create_table :cars do |t|
-      t.belongs_to :driver
       t.integer    :year
       t.integer    :make
       t.integer    :model
