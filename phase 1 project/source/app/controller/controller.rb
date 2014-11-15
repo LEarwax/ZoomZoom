@@ -1,7 +1,6 @@
 require_relative "../models/edmunds"
 require_relative "../view/view"
 require_relative "../../config/environment"
-require 'pp'
 
 module Controller
   def self.run
@@ -15,6 +14,7 @@ module Controller
       year = gets.chomp.to_i
       data = Edmunds.run(year)
       Car.create(data)
+      puts "Your car was successfully added"
     when 2
       cars = Car.all
       cars.each { |car| puts "#{car.year} #{car.make} #{car.model} MPG: #{car.mpg_combined} Horsepower: #{car.horsepower} Torque: #{car.torque} Weight: #{car.weight} 0-60: #{car.zero_2_sixty}"}
